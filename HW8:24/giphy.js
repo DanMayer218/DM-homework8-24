@@ -9,7 +9,7 @@ for (i=0, i < topics.length; i++); {
 
     
     var buttonRender =
-    $("#buttonPopBox").append("<button keyword="topics[i].text"> + topics[i].text + "</button>");
+    $("#buttonPopBox").append("<button id="keyButton" keyword="topics[i].text"> + topics[i].text + "</button>");
     // POTENTIALLY BETTER WAY TO CREATE BUTTONS BY THE ARRAY?
     // document.getElementById("buttonPopBox").innerHTML = "<button> + topics[i] + </button>"
     
@@ -27,33 +27,33 @@ for (i=0, i < topics.length; i++); {
 
 
 
-// create methods that will append buttons for each of the keyword items in the array
+                // create methods that will append buttons for each of the keyword items in the array
 
-// create a var to use in the queryuRL so that the topic associated with the appended button will be entered into the search
+                // create a var to use in the queryuRL so that the topic associated with the appended button will be entered into the search
 
+                $("keyButton").on("click", function() {
+                // using the api key from giphy, and AJAX with the GET method we will be able to make 
+                // a xhttp request from their server for giphs based on the keywords in the buttons and the array.
+                var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
+                        this.keyword + "api_key=fd0KI4stOcjLEoVUBfTGMT8UUQbRZCYq&q=&limit=10&offset=0&rating=PG-13&lang=en";
 
-// using the api key from giphy, and AJAX with the GET method we will be able to make 
-// a xhttp request from their server for giphs based on the keywords in the buttons and the array.
-var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-        topics + "api_key=fd0KI4stOcjLEoVUBfTGMT8UUQbRZCYq&q=&limit=10&offset=0&rating=PG-13&lang=en";
+                // console log to see that everything is working in the API and that we are receiving the requested giphs
 
-// console log to see that everything is working in the API and that we are receiving the requested giphs
+                // Set the giphs default state to still,
 
-// Set the giphs default state to still,
+                // create an onclick event for the giphs that will animate the giph after a click event and will return it to a still state upon a second click
 
-// create an onclick event for the giphs that will animate the giph after a click event and will return it to a still state upon a second click
+                // Create the actual jquery code to create the giph 
 
-// Create the actual jquery code to create the giph 
+                // Append text to the above mentioned giph and arrange for the ratings info to populate the appended <p> tag 
 
-// Append text to the above mentioned giph and arrange for the ratings info to populate the appended <p> tag 
+                // 
 
-// 
-
-
-
-
+                };
 
 
+// VAR TO COLLECT DATA FROM THE USER KEYWORD INPUT FORM.**********************************
+// var userKey = $("#userkey").val().trim();
 
 
 
