@@ -10,7 +10,7 @@
 }
 
 #wrapper {
-    height: 1100px;
+    height: 1400px;
     padding-left: 20px;
     padding-right: 20px;
     padding-top:10px;
@@ -22,12 +22,12 @@
 
 #buttonbox {
 
-    color: rgb(0, 0, 0); 
+    color: white; 
     text-align: center;
-    background-image: url(https://cdn.pixabay.com/photo/2017/08/07/22/39/cloud-2608708_960_720.jpg);
+    background-image: url(http://pre14.deviantart.net/78d0/th/pre/f/2013/174/3/e/recycled_texture_background_by_sandeep_m-d6aeau9.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    text-shadow: 10px 10px 10px #000000;
+    
     box-shadow: 10px 10px 10px #000000;
 
 
@@ -35,8 +35,33 @@
 
 #buttonbox1 {
     
-    color: black;
+    color: white;
     font-family: 'Allerta Stencil', sans-serif;
-    font-size: 50px;
+    font-size: 40px;
+}
+
+#keywordbutt {
+    color: black;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: black;
+
+}
+
+#keysubmit {
+    color: black;
+    background-color: navy;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: black;
+
+
+}
+
+#giphGallery {
+
+    color: black;
+    display: flex;
+
 }
 
