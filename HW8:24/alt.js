@@ -70,49 +70,28 @@
     // ADDITIONALLY WHENEVER THERE IS A USER INPUT KEYWORD, THE KEYWORD SHOULD BE PUSHED TO THE TOPICS ARRAY AND SUBSEQUENTLY
     // A BUTTON WILL BE GENERATED TO REMAIN IN THE BUTTONS BOX.  LETS DO IT!!
 
-        $("button").on("click", function() {
+    // var genbutts = 
+    // $(".btnRender").on("click", function() {
 
-            var buttkey = $("#userkey").val().trim();
-            topics.push("buttkey");
-            console.log("buttkey");
-            
-            // console logs that I used to test the buttkey var
-            // console.log(buttkey);
-            // console.log("hey dickhead");
+    //     var buttgens = $
 
-              
-        //         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + this.keyword + 
-        //                         "api_key=fd0KI4stOcjLEoVUBfTGMT8UUQbRZCYq&q=&limit=10&offset=0&rating=PG-13&lang=en";
 
-        //                 $.ajax({
-        //                     url: queryURL,
-        //                     method: "GET"
-        //                   })
-                            
-        //             .then(function(response) {
-                            
-                          
-        //         var results = response.data;
+    // }
 
-        //         for (var i = 0; i < results.length; i++) {
 
-        //             var gifDiv = $("<div>");
 
-                
-                    
-        //             var p = $("<p>").text("Rating: " + results[i].rating);
-                    
-        //             var giphImage = $("<img>");
-                 
-        //             gifImage.attr("src", results[i].ratings);
+    //   var keySubmit =
+    //   the onclick event to initiate the collection of the users keywords to send them in the ajax request and to push the vals to the topics array
+        $("#keySubmit").on("click", function() {
 
-                    
-        //             gifDiv.append(p);
-        //             gifDiv.append(gifImage);
-                    
+            var userkey = $("#userkey").val().trim();
+            topics.push(userkey);
 
-        //             $("#giphGallery").prepend(gifDiv);
-        //         };
-            
-        //     });
-        // }) 
+          
+            // var queryURL = "https://api.giphy.com/v1/gifs/search?" + buttkey + "api_key=fd0KI4stOcjLEoVUBfTGMT8UUQbRZCYq&q=&limit=10&offset=0&rating=PG-13&lang=en";
+
+        });
+        // console log watching our array to verify if the collected val is being pushed to the array
+            console.log(userkey);
+
+
