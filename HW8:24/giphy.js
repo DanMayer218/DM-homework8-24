@@ -2,7 +2,7 @@
 var topics = ["leslie neilson", "chris farley", "three stooges", "flight of the conchords", "mike myers", "monty python", "jim carrey"];
 
 // create a for loop that will cycle throught the topics array, 
-for (i=0, i < topics.length; i++); {
+for (var i = 0, i < topics.length; i++); {
 
     // create methods that will append buttons for each of the keyword items in the array
     function buttonRender() {
@@ -37,7 +37,43 @@ for (i=0, i < topics.length; i++); {
                 var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
                         this.keyword + "api_key=fd0KI4stOcjLEoVUBfTGMT8UUQbRZCYq&q=&limit=10&offset=0&rating=PG-13&lang=en";
 
-                // console log to see that everything is working in the API and that we are receiving the requested giphs
+                        $.ajax({
+                            url: queryURL,
+                            method: "GET"
+                          })
+                            // After data comes back from the request
+                            .then(function(response) {
+                            
+                            // TEST CODE TO THIS POINT TO SEE IF THINGS ARE WORKING BY CONSOLE LOGGING
+                                //   console.log(queryURL);
+
+                // console log to see that everything is working in the API and that we are receiving data for requested giphs 
+
+                // create a variable to store the data from the ajax request
+                var results = response.data;
+
+                // CREATE A FOR LOOP TO CYCLE THROUGH EACH RESULT ITEM
+                for (var i = 0; i < results.length; i++) {
+
+                    var gifDiv = $("<div>");
+
+                
+                    // creating a p tag for the results.rating data to append
+                    var p = $("<p>").text("Rating: " + results[i].rating);
+                    
+                    var giphImage = $("<img>");
+                    // grabbing the ratings data from the results and adding it as an attribute to the giphDiv
+                    gifImage.attr("src", results[i].ratings);
+
+                    // appending both the paragraph and the image tags to the gifDiv
+                    gifDiv.append(p);
+                    gifDiv.append(gifImage);
+                    
+                    // finally prepending the div with the image and the p tag to it proper div on the html page.
+                    $("#giphGallery").prepend(gifDiv);
+
+
+                }
 
                 // Set the giphs default state to still,
 
