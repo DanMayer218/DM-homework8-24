@@ -53,6 +53,7 @@
 
 #buttonPopBox {
 
+    height: 200px;
     color: black;
     display: flex;
     flex-flow: row;
@@ -80,12 +81,21 @@
 
 #giphGallery {
 
+    height: auto;
+    width: 1000px;;
     color: black;
     display: flex;
     flex-flow: row;
     justify-content: space-around;
-
+    background-image: url(https://www.yorkeandmidnorth.com.au/wp-content/uploads/2018/06/wallpaper-background-texture-11-300x188.jpg);
 
 
 }
 
+button {
+
+    color: black;
+    height: 50px;
+    width: 100px;
+    background-color: teal;
+}
