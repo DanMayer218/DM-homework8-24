@@ -5,43 +5,64 @@
 
 
 // CREATE A VAR WITH AN ARRAY IN IT CONTAINING A STRING WITH MY KEYWORDS.
-var topics = ["leslie neilson", "chris farley", "three stooges", "flight of the conchords", "mike myers", "monty python", "jim carrey"];
+var topics = ["leslie neilson", "chris farley", "three stooges", 
+"flight of the conchords", "mike myers", "monty python", "jim carrey", "eddie murphy"];
 
 
 // document ready event to initiate the button rendering
-document.addEventListener('DOMContentLoaded', function(){
-// $("document").ready(function() {
- var arrayButt = function() {
+$(window).on("load", function() {
+
+//  var arrayButt = function() {
 // create a for loop that will cycle throught the topics array, 
 for (var i = 0; i < topics.length; i++) {
+    
+    
+    var btn = $("<button>");
+    var txt = $(btn).attr(topics[i]);
+    btn.addClass("btn-primary");
+    btn.addClass("btn");
+    btn.addClass("btnrender");
+    // btn.append(txt);
+    btn.text(topics[i]);
+    $("#buttonPopBox").append(btn);
+    
+
+
+
+    console.log(btn);
 
     // create methods that will append buttons for each of the keyword items in the array
+    // var arrayButt = function () {
+    //     $("#buttonPopBox").append("<button>");
+    //     $("arrayButt").attr(topics[i], text);
+    // };
+    // console.log(arrayButt);
+//     if (i <= topics.length) {
 
-    if (i <= topics.length) {
-        function buttongenerator() {
-    // $("#buttonPopBox").append("<button id="keyButton" keyword="topics[i].text"> + topics[i].text + "</button>");
-    var buttonDiv = $("#buttonPopBox").append("<div>");
-    var buttonApp = $("<button>");
-    var p = $("<p>").text("topics[i]");
-    var keywordbutt = $("buttonApp").attr("keyword:" + topics[i]);
+//         function buttongenerator() {
+//     // $("#buttonPopBox").append("<button id="keyButton" keyword="topics[i].text"> + topics[i].text + "</button>");
+//     var buttonDiv = $("#buttonPopBox").append("<div>");
+//     var buttonApp = $("<button>");
+//     var p = $("<p>").text("topics[i]");
+//     var keywordbutt = $("buttonApp").attr("keyword:" + topics[i]);
             
-            buttonDiv.append(p);
-            buttonDiv.append(buttonApp);
+//             buttonDiv.append(p);
+//             buttonDiv.append(buttonApp);
 
-            $("#buttonPopBox").prepend(buttonDiv);
-    }
-}
+//             $("#buttonPopBox").prepend(buttonDiv);
+//     }
+// }
 
-    else (i > topics.length)
-        console.log("buttons done sir");
+//     else (i > topics.length)
+//         console.log("buttons done sir");
     
    
         
 
     };
 
-    }
-});
+    })
+// });
 
 
 
