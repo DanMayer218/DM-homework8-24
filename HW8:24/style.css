@@ -9,6 +9,15 @@
 
 }
 
+#secondaryHeader {
+
+    font-family: 'Coda', cursive;
+    color: black;
+    font-size: 30px;
+    text-shadow: 0px 0px 0px #000000;
+    margin-top: 20px;
+}
+
 #wrapper {
     height: 1400px;
     padding-left: 20px;
@@ -22,9 +31,10 @@
 
 #buttonbox {
 
+    height: auto;
     color: white; 
     text-align: center;
-    background-image: url(http://pre14.deviantart.net/78d0/th/pre/f/2013/174/3/e/recycled_texture_background_by_sandeep_m-d6aeau9.jpg);
+    background-image: url(https://image.freepik.com/free-vector/dark-blue-watercolor-background-design_1034-737.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -38,6 +48,15 @@
     color: white;
     font-family: 'Allerta Stencil', sans-serif;
     font-size: 40px;
+}
+
+#buttonPopBox {
+
+    color: black;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    
 }
 
 #keywordbutt {
@@ -62,6 +81,10 @@
 
     color: black;
     display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+
+
 
 }
 
