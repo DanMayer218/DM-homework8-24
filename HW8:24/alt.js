@@ -30,34 +30,22 @@
 
             })
             
-// ********THIS PSUEDO CODE IS NO LONGER RELEVANT TO THE FILE****************************
-// **************************************************************************************
-                    // create methods that will append buttons for each of the keyword items in the array
-                    // var arrayButt = function () {
-                    //     $("#buttonPopBox").append("<button>");
-                    //     $("arrayButt").attr(topics[i], text);
-                    // };
-                    // console.log(arrayButt);
-                //     if (i <= topics.length) {
 
-                //         function buttongenerator() {
-                //     // $("#buttonPopBox").append("<button id="keyButton" keyword="topics[i].text"> + topics[i].text + "</button>");
-                //     var buttonDiv = $("#buttonPopBox").append("<div>");
-                //     var buttonApp = $("<button>");
-                //     var p = $("<p>").text("topics[i]");
-                //     var keywordbutt = $("buttonApp").attr("keyword:" + topics[i]);
-                            
-                //             buttonDiv.append(p);
-                //             buttonDiv.append(buttonApp);
-
-                //             $("#buttonPopBox").prepend(buttonDiv);
-                //     }
-                // }
-
-                //     else (i > topics.length)
-                //         console.log("buttons done sir");
+                    // onclick event to call api request
+                    $("button").on("click", function () {
+                        var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=fd0KI4stOcjLEoVUBfTGMT8UUQbRZCYq&q=&limit=10&offset=0&rating=PG-13&lang=en";
+                        
+                        $.ajax({
+                            url: queryURL,
+                            method: "GET"
+                          })
                     
+                            // After the data from the AJAX request comes back
+                            .then(function(response) {
+                                console.log(response);
 
+
+                    }
 // ******************************************************************************************************************
 // BUTTONS ARE GENERATING FROM THE ARRAY PROPERLY TO THIS POINT,
 // FROM HERE ON ITS ALL ABOUT THE API'S, AJAX, GET, THEN CREATING THE DIVS, APPENDING THE GIPHS, ATTR THE TEXT FROM THE REQUESTED
@@ -82,16 +70,16 @@
 
     //   var keySubmit =
     //   the onclick event to initiate the collection of the users keywords to send them in the ajax request and to push the vals to the topics array
-        $("#keySubmit").on("click", function() {
+        // $("#keySubmit").on("click", function() {
 
-            var userkey = $("#userkey").val().trim();
-            topics.push(userkey);
+        //     var userkey = $("#userkey").val().trim();
+        //     topics.push(userkey);
 
           
             // var queryURL = "https://api.giphy.com/v1/gifs/search?" + buttkey + "api_key=fd0KI4stOcjLEoVUBfTGMT8UUQbRZCYq&q=&limit=10&offset=0&rating=PG-13&lang=en";
 
-        });
+        // });
         // console log watching our array to verify if the collected val is being pushed to the array
-            console.log(userkey);
+            // console.log(userkey);
 
 
